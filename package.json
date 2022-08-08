@@ -1,0 +1,24 @@
+{
+  "name": "goit--node-hw-01-contacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiiLuI19/goit--node-hw-01-contacts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AiiLuI19/goit--node-hw-01-contacts/issues"
+  },
+  "homepage": "https://github.com/AiiLuI19/goit--node-hw-01-contacts#readme",
+  "dependencies": {
+    "yargs": "^17.5.1"
+  }
+}
