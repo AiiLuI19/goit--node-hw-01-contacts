@@ -1,8 +1,9 @@
 const fs = require("fs").promises;
-
 const path = require("path");
+const { v4: uuidv4 } = require("uuid");
 
 const contactsPath = path.resolve("db/contacts.json");
+// const contactsPath = path.join(__dirname, "db/contacts.json");
 
 async function listContacts() {
   try {
@@ -44,9 +45,10 @@ async function removeContact(contactId) {
 async function addContact(name, email, phone) {
   try {
     const data = await fs.readFile(contactsPath, "utf-8");
-    console.log(data);
-    const newContact = `${data} ${name} ${email} ${phone}`;
-    await fs.writeFile(contactsPath, newContact, "utf-8");
+    const newData = JSON.parse(data);
+    const id = uuidv4();
+    const newContact = [...newData, { id, name, email, phone }];
+    await fs.writeFile(contactsPath, JSON.stringify(newContact), "utf-8");
   } catch (error) {
     console.error(error);
   }

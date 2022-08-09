@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/AiiLuI19/goit--node-hw-01-contacts#readme",
   "dependencies": {
+    "nodemon": "^2.0.19",
+    "uuid": "^8.3.2",
     "yargs": "^17.5.1"
   }
 }
